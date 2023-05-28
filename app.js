@@ -3,9 +3,7 @@ const express = require("express");
 const app = express();
 const router = require("./router");
 
-//MongoDB connect
-const db = require("./server").db();
-const mongodb = require("mongodb");
+
 
 // 1: Kirish code
 // express ga kirib kelayotgan kodlar

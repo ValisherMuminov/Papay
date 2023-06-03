@@ -1,9 +1,15 @@
 console.log("Web Serverni boshlash");
 const express = require("express");
 const app = express();
-const router = require("./router");
+const router = require("./router.js");
+const router_bssr = require("./router_bssr.js");
 
-
+// let session = require("express-session");
+// const MongoDBStore = requrie("connect-mongodb-session")(session);
+// const store = new MongoDBStore({
+//     uri: process.env.MONGO_URL,
+//     collection: "sessions",
+// });
 
 // 1: Kirish code
 // express ga kirib kelayotgan kodlar
@@ -28,8 +34,7 @@ app.set("views", "views");
 app.set("view engine", "ejs");
 
 // 4: Routing code
-// app.use("/resto", router_bssr)
+app.use("/resto", router_bssr);
 app.use("/", router);
-
 
 module.exports = app;

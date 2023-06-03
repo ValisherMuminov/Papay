@@ -1,24 +1,38 @@
 
 //==============/** CHALLENGE 5: Can You Sort Me */==================
-
-const detail_list = [12, 23, null, 34, null, 32, null, null];
-const result = moveNullsKeepOrder(detail_list);
-console.log("result:", result);
-
-function moveNullsKeepOrder(detail_list) {
-  let newArr = [];
-  for (let i = 0; i < detail_list.length; i++) {
-    if (detail_list[i] !== null) {
-      newArr.push(detail_list[i]);
-    }
-  }
-  for (let i = 0; i < detail_list.length; i++) {
-    if (detail_list[i] === null) {
-      newArr.push(detail_list[i]);
-    }
-  }
-  return newArr;
+let arr = [12, 23, null, 34, null, 32, null, null];
+function moveNullsKeepOeder(arr) {
+return  arr.sort();
 }
+console.log(moveNullsKeepOeder(arr));
+////////////////////////////////////////////////////////////////////
+// let arr = [4, 10, 888, 7, 1, null, 99, null, 100];
+
+// let filteredNum = arr.filter((value) => value !== null).map((value) => value);
+// let filteredNull = arr.filter((value) => value === null).map((value) => value);
+// let result = filteredNum.concat(filteredNull);
+
+// console.log(result);
+
+//////////////////////////////////////////////////////////////////////
+// const detail_list = [12, 23, null, 34, null, 32, null, null];
+// const result = moveNullsKeepOrder(detail_list);
+// console.log("result:", result);
+
+// function moveNullsKeepOrder(detail_list) {
+//   let newArr = [];
+//   for (let i = 0; i < detail_list.length; i++) {
+//     if (detail_list[i] !== null) {
+//       newArr.push(detail_list[i]);
+//     }
+//   }
+//   for (let i = 0; i < detail_list.length; i++) {
+//     if (detail_list[i] === null) {
+//       newArr.push(detail_list[i]);
+//     }
+//   }
+//   return newArr;
+// }
 
 //==============/** CHALLENGE 4: buyStock,maxProfit */==================
 // const prices = [2, 1, 3, 10];

@@ -1,8 +1,7 @@
-
 //==============/** CHALLENGE 5: Can You Sort Me */==================
 let arr = [12, 23, null, 34, null, 32, null, null];
 function moveNullsKeepOeder(arr) {
-return  arr.sort();
+  return arr.sort();
 }
 console.log(moveNullsKeepOeder(arr));
 ////////////////////////////////////////////////////////////////////
@@ -61,7 +60,7 @@ console.log(moveNullsKeepOeder(arr));
 //   let Profit = 0;
 //   let minPrice = stock_prices[0];
 //   let Index = 0;
- 
+
 //   for (let i = 1; i < stock_prices.length; i++) {
 //     const currentPrice = stock_prices[i];
 

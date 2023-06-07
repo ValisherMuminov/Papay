@@ -1,9 +1,56 @@
+//==============/** CHALLENGE 6: MURDER CASE **/==================
+
+
+/* F-Task: Shunday function tuzing, unga string argument pass bolsin. 
+Function ushbu agrumentdagi faqat digitlarni yangi stringda return qilsin!
+Masalan: findDigits('ad5we34jkf89') return qilishi kerak bolgan qiymat '53489'
+*/
+let findDigits = (str) => {
+  let found = [];
+  let arr = str.split("");
+  arr.map((ele) => {
+    if (parseInt(ele)) {
+      found.push(ele);
+    }
+  });
+  return found.join("");
+};
+
+let str = "ad5we34jkf89";
+const result = findDigits(str);
+console.log(result);
+//////////////////////////////////////////////
+
+// const findDigits1 = (ele) => {
+//   let number = "";
+//   for (let i = 1; i < ele.length; i++) {
+//     if (!isNaN(ele[i])) number += ele[i];
+//   }
+//   return Number(number);
+// };
+
+// const result1 = findDigits1("ad5we34jkf89");
+// console.log(result1);
+//////////////////////////////////////////////
+
+// let findDigits = (str) => {
+//   let finded = str.split("").filter((value) => {
+//     return !isNaN(parseInt(value));
+//   });
+//   return finded.join("");
+// };
+
+// let str = "ad5we34jkf89";
+// const result = findDigits(str);
+// console.log(result);
+
+
 //==============/** CHALLENGE 5: Can You Sort Me */==================
-let arr = [12, 23, null, 34, null, 32, null, null];
-function moveNullsKeepOeder(arr) {
-  return arr.sort();
-}
-console.log(moveNullsKeepOeder(arr));
+// let arr = [12, 23, null, 34, null, 32, null, null];
+// function moveNullsKeepOeder(arr) {
+//   return arr.sort();
+// }
+// console.log(moveNullsKeepOeder(arr));
 ////////////////////////////////////////////////////////////////////
 // let arr = [4, 10, 888, 7, 1, null, 99, null, 100];
 

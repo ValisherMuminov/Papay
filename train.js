@@ -1,24 +1,49 @@
 //==============/** CHALLENGE 6: MURDER CASE **/==================
 
+const magazine =
+  "Loren kill ipsum dolor sit amet, consectetur adipiscing elit, you sed do eious tempor incididunt ut labore et dolore magna";
 
+const note = "dolor kill you";
+const result = canMurderWrite(note);
+console.log("Killer yoza oladimi:", result);
+
+function canMurderWrite(note) {
+  const text = note.split(" ");
+  const magazineText = magazine.split(" ");
+  const result = text.map((word) => magazineText.includes(word));
+  return result.every((value) => value === true);
+};
+
+// const canMurderWrite = (note) => {
+//   let text = note.split("");
+//   let magazineText = magazine.split("");
+//   for (let i = 0; i < text.length; i++) {
+//     if (!magazineText.includes(text[i])) {
+//       return false;
+//     }
+//   }
+//   return true;
+// };
+
+/////////////////////////////////////////////////////////////////////
 /* F-Task: Shunday function tuzing, unga string argument pass bolsin. 
 Function ushbu agrumentdagi faqat digitlarni yangi stringda return qilsin!
 Masalan: findDigits('ad5we34jkf89') return qilishi kerak bolgan qiymat '53489'
 */
-let findDigits = (str) => {
-  let found = [];
-  let arr = str.split("");
-  arr.map((ele) => {
-    if (parseInt(ele)) {
-      found.push(ele);
-    }
-  });
-  return found.join("");
-};
+// let findDigits = (str) => {
+//   let found = [];
+//   let arr = str.split("");
+//   arr.map((ele) => {
+//     if (parseInt(ele)) {
+//       found.push(ele);
+//     }
+//   });
+//   return found.join("");
+// };
 
-let str = "ad5we34jkf89";
-const result = findDigits(str);
-console.log(result);
+// let str = "ad5we34jkf89";
+// const result = findDigits(str);
+// console.log(result);
 //////////////////////////////////////////////
 
 // const findDigits1 = (ele) => {
@@ -43,7 +68,6 @@ console.log(result);
 // let str = "ad5we34jkf89";
 // const result = findDigits(str);
 // console.log(result);
-
 
 //==============/** CHALLENGE 5: Can You Sort Me */==================
 // let arr = [12, 23, null, 34, null, 32, null, null];

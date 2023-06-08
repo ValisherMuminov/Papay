@@ -7,12 +7,7 @@ const note = "dolor kill you";
 const result = canMurderWrite(note);
 console.log("Killer yoza oladimi:", result);
 
-function canMurderWrite(note) {
-  const text = note.split(" ");
-  const magazineText = magazine.split(" ");
-  const result = text.map((word) => magazineText.includes(word));
-  return result.every((value) => value === true);
-};
+
 
 // const canMurderWrite = (note) => {
 //   let text = note.split("");
@@ -24,6 +19,12 @@ function canMurderWrite(note) {
 //   }
 //   return true;
 // };
+function canMurderWrite(note) {
+  const text = note.split(" ");
+  const magazineText = magazine.split(" ");
+  const result = text.map((value) => magazineText.includes(value));
+  return result.every((value) => value === true);
+};
 
 /////////////////////////////////////////////////////////////////////
 /* F-Task: Shunday function tuzing, unga string argument pass bolsin. 

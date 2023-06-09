@@ -30,8 +30,8 @@ app.use(
   })
 );
 app.use(function (req, res, next) {
-    res.locals.member = req.session.member;
-    next();
+  res.locals.member = req.session.member;
+  next();
 });
 
 // 3: Views code

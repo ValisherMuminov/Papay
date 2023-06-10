@@ -33,7 +33,8 @@ const productSchema = new mongoose.Schema(
     },
     product_discount: {
       type: Number,
-      required: 0,
+      required: false,
+      default: 0,
     },
     product_left_cnt: {
       type: Number,
